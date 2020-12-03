@@ -21,7 +21,6 @@ main {
 }
 
 .page-header__burger {
-  display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin: 0;
@@ -36,6 +35,7 @@ main {
       align-self: center;
   display: inline-block;
   color: inherit;
+  display: none;
 }
 
 .page-header__burger svg {

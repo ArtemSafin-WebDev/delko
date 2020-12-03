@@ -21,7 +21,7 @@ main {
 }
 
 .page-header__burger {
-  display: none;
+ 
   flex-shrink: 0;
   margin: 0;
   margin-left: 20px;
@@ -34,6 +34,7 @@ main {
   align-self: center;
   display: inline-block;
   color: inherit;
+  display: none;
   svg {
     width: 24px;
     height: 14px;
