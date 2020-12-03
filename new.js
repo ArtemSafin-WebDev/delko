@@ -114,6 +114,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var instance = new Inputmask({ mask: "+7 (999) 999-99-99" });
     instance.mask(input);
   });
+
+  var pageHeader = document.querySelector('.page-header.fill-on-scroll');
+
+  if (pageHeader) {
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset >= 20) {
+       
+        pageHeader.classList.add('filled');
+      } else {
+      
+        pageHeader.classList.remove('filled');
+      }
+    })
+  }
 });
 
 window.addEventListener("load", function () {
