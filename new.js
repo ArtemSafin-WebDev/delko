@@ -128,6 +128,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
+
+
+  var pageHeaderOpenSearch = document.querySelector('.page-header__search-link');
+  var pageHeaderCloseSearch = document.querySelector('.page-header__search-form-close');
+
+  if (pageHeaderOpenSearch && pageHeader) {
+    pageHeaderOpenSearch.addEventListener('click', function(event) {
+      event.preventDefault();
+      pageHeader.classList.add('header-search-open')
+    })
+
+    pageHeaderCloseSearch.addEventListener('click', function(event) {
+      event.preventDefault();
+      pageHeader.classList.remove('header-search-open')
+    })
+  }
 });
 
 window.addEventListener("load", function () {
