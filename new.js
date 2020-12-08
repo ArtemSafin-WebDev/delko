@@ -144,6 +144,26 @@ document.addEventListener("DOMContentLoaded", function () {
       pageHeader.classList.remove('header-search-open')
     })
   }
+
+
+  var selectableItems = [...Array.from(document.querySelectorAll('.page-header__nav-link')), document.querySelector('.page-header__search-link')];
+
+  var notEmptySelectableItems = selectableItems.filter(item => item != null)
+
+
+  notEmptySelectableItems.forEach(function(item) {
+    if (!item) return;
+    item.addEventListener('mouseenter', function(event) {
+      notEmptySelectableItems.forEach(item => item.classList.add('transparent'))
+      item.classList.remove('transparent');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      notEmptySelectableItems.forEach(item => item.classList.remove('transparent'))
+    })
+  })
+
+
 });
 
 window.addEventListener("load", function () {

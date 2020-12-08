@@ -10,7 +10,7 @@ main {
 
   color: white;
   z-index: 600;
-  transition: background-color 0.2s, color .2s;
+  transition: background-color 0.2s, color 0.2s;
   backface-visibility: hidden;
   border-bottom: 1px solid transparent;
 
@@ -34,12 +34,10 @@ main {
   left: 0;
   top: 100%;
   width: 100%;
-  
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear .3s;
-
+  transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear 0.3s;
 
   height: 0;
   overflow: hidden;
@@ -78,7 +76,7 @@ main {
   color: white;
   width: 100%;
   padding-top: 0;
-  transition: color .2s;
+  transition: color 0.2s;
   &::-webkit-input-placeholder {
     color: white;
   }
@@ -123,7 +121,7 @@ main {
   color: rgba(white, 0.5);
   padding: 0;
   margin: 0;
-  transition: color .2s;
+  transition: color 0.2s;
   .filled & {
     color: rgba(black, 0.5);
   }
@@ -142,7 +140,7 @@ main {
     display: block;
     width: 14px;
     height: 14px;
-    transition: fill .2s;
+    transition: fill 0.2s;
   }
 
   .filled & {
@@ -150,8 +148,6 @@ main {
       fill: black;
     }
   }
-
- 
 }
 
 .page-header__burger {
@@ -212,11 +208,11 @@ main {
   align-items: center;
   font-size: 16px;
   line-height: 22px;
-  transition: color 0.2s;
-  color: rgba(white, 0.45);
+  transition: color 0.2s, opacity 0.2s;
+  color: white;
   &:link,
   &:visited {
-    color: rgba(white, 0.45);
+    color: white;
   }
 
   svg {
@@ -230,28 +226,16 @@ main {
     transition: transform 0.2s;
   }
 
-  &:hover {
-    color: white;
-  }
-
-  .header-search-open & {
-    color: white;
+  &.transparent {
+    opacity: 0.5;
   }
 
   .page-header.filled & {
-    color: rgba(black, 0.45);
+    color: black;
     &:link,
     &:visited {
-      color: rgba(black, 0.45);
-    }
-
-    &:hover {
       color: black;
     }
-
-    // .header-search-open & {
-    //   color: black;
-    // }
   }
 
   .header-search-open.filled & {
@@ -348,37 +332,26 @@ main {
 .page-header__search-link {
   margin-right: 35px;
   flex-shrink: 0;
-  transition: color 0.2s;
+  transition: color 0.2s, opacity 0.2s;
   align-self: center;
-  color: rgba(white, 0.45);
+  color: white;
   &:link,
   &:visited {
-    color: rgba(white, 0.45);
-  }
-
-  &:hover {
     color: white;
   }
 
-  .header-search-open & {
-    color: white;
+  &.transparent {
+    opacity: 0.5;
   }
 
   .page-header.filled & {
-    color: rgba(black, 0.45);
+    color: black;
     &:link,
     &:visited {
-      color: rgba(black, 0.45);
+      color:  black;
     }
   }
 
-  .header-search-open.filled & {
-      color: black;
-      &:link,
-      &:visited {
-        color: black;
-      }
-  }
   svg {
     width: 15px;
     height: 15px;
@@ -1000,7 +973,6 @@ main {
     flex-wrap: wrap;
   }
 
-
   .page-header__search-link {
     color: white;
 
@@ -1020,10 +992,8 @@ main {
 }
 
 @media screen and (max-width: 640px) {
-
   .page-header.header-search-open {
-    background-color: rgba(black, .9);
-  
+    background-color: rgba(black, 0.9);
   }
 
   .page-header__search-form-input {

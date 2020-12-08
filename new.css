@@ -9,8 +9,8 @@ main {
   width: 100%;
   color: white;
   z-index: 600;
-  -webkit-transition: background-color 0.2s, color .2s;
-  transition: background-color 0.2s, color .2s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border-bottom: 1px solid transparent;
@@ -36,8 +36,8 @@ main {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear .3s;
-  transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear .3s;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s, position 0s linear 0.3s;
   height: 0;
   overflow: hidden;
 }
@@ -78,8 +78,8 @@ main {
   color: white;
   width: 100%;
   padding-top: 0;
-  -webkit-transition: color .2s;
-  transition: color .2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .page-header__search-form-input::-webkit-input-placeholder {
@@ -138,8 +138,8 @@ main {
   color: rgba(255, 255, 255, 0.5);
   padding: 0;
   margin: 0;
-  -webkit-transition: color .2s;
-  transition: color .2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .filled .page-header__search-form-heading {
@@ -162,8 +162,8 @@ main {
   display: block;
   width: 14px;
   height: 14px;
-  -webkit-transition: fill .2s;
-  transition: fill .2s;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .filled .page-header__search-form-close svg {
@@ -247,13 +247,13 @@ main {
           align-items: center;
   font-size: 16px;
   line-height: 22px;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  color: rgba(255, 255, 255, 0.45);
+  -webkit-transition: color 0.2s, opacity 0.2s;
+  transition: color 0.2s, opacity 0.2s;
+  color: white;
 }
 
 .page-header__nav-link:link, .page-header__nav-link:visited {
-  color: rgba(255, 255, 255, 0.45);
+  color: white;
 }
 
 .page-header__nav-link svg {
@@ -271,23 +271,15 @@ main {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.page-header__nav-link:hover {
-  color: white;
-}
-
-.header-search-open .page-header__nav-link {
-  color: white;
+.page-header__nav-link.transparent {
+  opacity: 0.5;
 }
 
 .page-header.filled .page-header__nav-link {
-  color: rgba(0, 0, 0, 0.45);
+  color: black;
 }
 
 .page-header.filled .page-header__nav-link:link, .page-header.filled .page-header__nav-link:visited {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-.page-header.filled .page-header__nav-link:hover {
   color: black;
 }
 
@@ -384,39 +376,27 @@ main {
   margin-right: 35px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.2s, opacity 0.2s;
+  transition: color 0.2s, opacity 0.2s;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: rgba(255, 255, 255, 0.45);
+  color: white;
 }
 
 .page-header__search-link:link, .page-header__search-link:visited {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.page-header__search-link:hover {
   color: white;
 }
 
-.header-search-open .page-header__search-link {
-  color: white;
+.page-header__search-link.transparent {
+  opacity: 0.5;
 }
 
 .page-header.filled .page-header__search-link {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-.page-header.filled .page-header__search-link:link, .page-header.filled .page-header__search-link:visited {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-.header-search-open.filled .page-header__search-link {
   color: black;
 }
 
-.header-search-open.filled .page-header__search-link:link, .header-search-open.filled .page-header__search-link:visited {
+.page-header.filled .page-header__search-link:link, .page-header.filled .page-header__search-link:visited {
   color: black;
 }
 
